@@ -1,5 +1,93 @@
-/* TODO (optional): Style the product card container */
+/* Each card is a small, easy-to-read product summary. */
+.card {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e0e8e3;
+  border-radius: 16px;
+  padding: 20px;
+  background: #f8fbf9;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
 
-/* TODO (optional): Add special styling for out-of-stock products */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(49, 82, 66, 0.10);
+}
 
-/* TODO (optional): Style the add/remove button */
+.card h3 {
+  margin: 10px 0 4px;
+  color: #19372a;
+  font-size: 1.35rem;
+}
+
+.category {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 5px 9px;
+  color: #4f8064;
+  background: #e8f1eb;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.price {
+  margin-bottom: 4px;
+  color: #315242;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.status {
+  color: #718078;
+  font-size: 0.92rem;
+}
+
+.outOfStock {
+  background: #f3f5f4;
+}
+
+.outOfStock .status {
+  color: #9a6658;
+}
+
+.addButton {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 14px;
+  color: #ffffff;
+  background: #4f8064;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background: #3f6952;
+}
+
+.addButton:active {
+  transform: translateY(1px);
+}
+
+:global(.dark-mode) .card {
+  border-color: #34483d;
+  background: #1a271f;
+}
+
+:global(.dark-mode) .card h3,
+:global(.dark-mode) .price {
+  color: #edf4ef;
+}
+
+:global(.dark-mode) .category {
+  color: #b9d1c1;
+  background: #2d4135;
+}
+
+:global(.dark-mode) .status {
+  color: #b7c4bc;
+}
